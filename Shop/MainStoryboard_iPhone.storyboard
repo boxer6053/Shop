@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12A269" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="gwE-rS-ff0">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+    </dependencies>
+    <scenes>
+        <!--Mein Menu View Controller - Main Menu-->
+        <scene sceneID="WZU-XI-U8a">
+            <objects>
+                <viewController id="xBR-pc-W37" customClass="MeinMenuViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="K2p-gs-27o">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nl3-eP-e4D">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="To Products">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toProductClick:" destination="xBR-pc-W37" eventType="touchUpInside" id="6tM-PK-JQ4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nl3-eP-e4D" firstAttribute="centerX" secondItem="K2p-gs-27o" secondAttribute="centerX" type="default" id="6g0-2h-faz"/>
+                            <constraint firstItem="nl3-eP-e4D" firstAttribute="centerY" secondItem="K2p-gs-27o" secondAttribute="centerY" type="default" id="j9V-VC-Wnk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main Menu" id="Mpa-7R-1Np"/>
+                    <connections>
+                        <segue destination="oem-qM-W4V" kind="push" identifier="toProducts" id="dTz-KO-4XA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AGs-CQ-Q5I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="651" y="51"/>
+        </scene>
+        <!--Products View Controller - Products-->
+        <scene sceneID="24e-Th-MxR">
+            <objects>
+                <viewController id="oem-qM-W4V" customClass="ProductsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nh3-6r-oDU">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSU-y8-zpn">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="To Detail Product">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toDetailProductClick:" destination="oem-qM-W4V" eventType="touchUpInside" id="xii-Zu-LpL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WSU-y8-zpn" firstAttribute="top" secondItem="nh3-6r-oDU" secondAttribute="top" constant="230" id="mUL-W0-FVK"/>
+                            <constraint firstItem="WSU-y8-zpn" firstAttribute="centerX" secondItem="nh3-6r-oDU" secondAttribute="centerX" type="default" id="zcF-U3-c0Q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Products" id="D2i-fx-2t3"/>
+                    <connections>
+                        <segue destination="dyO-3g-f0z" kind="push" identifier="toDetail" id="6ZL-M4-Esv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGt-rY-VSk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1106" y="51"/>
+        </scene>
+        <!--Detail Product View Controller - Detail Product-->
+        <scene sceneID="JZ0-Sp-12y">
+            <objects>
+                <viewController id="dyO-3g-f0z" customClass="DetailProductViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pyt-bS-Uyh">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Yf-bg-XeT">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="To Info Product">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toInfoProduct:" destination="dyO-3g-f0z" eventType="touchUpInside" id="YnZ-lx-Iu8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ah9-Of-WSp">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="To Share">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toShare:" destination="dyO-3g-f0z" eventType="touchUpInside" id="F0O-AE-8Ha"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6Yf-bg-XeT" firstAttribute="top" secondItem="Pyt-bS-Uyh" secondAttribute="top" constant="170" id="TBu-yY-P05"/>
+                            <constraint firstItem="Ah9-Of-WSp" firstAttribute="top" secondItem="Pyt-bS-Uyh" secondAttribute="top" constant="245" id="dsF-PQ-FjO"/>
+                            <constraint firstItem="Ah9-Of-WSp" firstAttribute="centerX" secondItem="6Yf-bg-XeT" secondAttribute="centerX" type="default" id="tbU-5w-mei"/>
+                            <constraint firstItem="Ah9-Of-WSp" firstAttribute="centerX" secondItem="Pyt-bS-Uyh" secondAttribute="centerX" type="default" id="vHe-TO-EHo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Detail Product" id="CJw-TV-1tt"/>
+                    <connections>
+                        <segue destination="bXH-Se-BKs" kind="push" identifier="toInfo" id="DcK-BM-Z8o"/>
+                        <segue destination="QPB-BF-0vw" kind="push" identifier="toShare" id="ncE-C8-FMZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VTM-GO-WEB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1583" y="51"/>
+        </scene>
+        <!--View Controller - Share-->
+        <scene sceneID="GbW-ni-WtF">
+            <objects>
+                <viewController id="QPB-BF-0vw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wzy-Zi-gEc">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Share" id="VSw-4D-kyu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F7w-Fy-og1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2050" y="739"/>
+        </scene>
+        <!--Info Product View Controller - Info Product-->
+        <scene sceneID="NIS-vN-jxv">
+            <objects>
+                <viewController id="bXH-Se-BKs" customClass="InfoProductViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5ar-Se-sTX">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Info Product" id="SSa-YE-5za"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kPI-Rh-6cC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2050" y="51"/>
+        </scene>
+        <!--Load App View Controller-->
+        <scene sceneID="hso-kT-BgQ">
+            <objects>
+                <viewController id="gwE-rS-ff0" customClass="LoadAppViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Krd-3d-NIZ">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <segue destination="jnR-lk-iFV" kind="modal" identifier="toMain" modalTransitionStyle="flipHorizontal" id="r0A-sl-eem"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GS9-OR-sAt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-333" y="51"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h1d-te-veD">
+            <objects>
+                <navigationController id="jnR-lk-iFV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cp9-SQ-N76">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xBR-pc-W37" kind="relationship" relationship="rootViewController" id="w6h-93-Vba"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3h4-jD-DX5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128" y="51"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="DetailProductViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DetailProductViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="toInfoProduct:"/>
+                <relationship kind="action" name="toShare:"/>
+            </relationships>
+        </class>
+        <class className="InfoProductViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/InfoProductViewController.h"/>
+        </class>
+        <class className="LoadAppViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoadAppViewController.h"/>
+        </class>
+        <class className="MeinMenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MeinMenuViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="toProductClick:"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ProductsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ProductsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="toDetailProductClick:"/>
+            </relationships>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
