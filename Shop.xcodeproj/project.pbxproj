@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F513336D1667957C00B401E6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F513336F1667957C00B401E6 /* MainStoryboard_iPhone.storyboard */; };
+		F513337B1667A2E400B401E6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F513337A1667A2E400B401E6 /* SystemConfiguration.framework */; };
+		F513337E1667A75A00B401E6 /* checkConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F513337D1667A75A00B401E6 /* checkConnection.m */; };
+		F52BF8631667C68500630CB6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BF8621667C68500630CB6 /* QuartzCore.framework */; };
+		F52BF8641667C6A100630CB6 /* libSSToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F51333861667C4DF00B401E6 /* libSSToolkit.a */; };
+		F52BF8651667C80400630CB6 /* SSToolkitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F513338A1667C4DF00B401E6 /* SSToolkitResources.bundle */; };
 		F55499E916669BA500470BAE /* LoadAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55499E816669BA500470BAE /* LoadAppViewController.m */; };
 		F55499EC16669BBE00470BAE /* MeinMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55499EB16669BBE00470BAE /* MeinMenuViewController.m */; };
 		F5AAD513166773D70013EA58 /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AAD512166773D70013EA58 /* ProductsViewController.m */; };
@@ -24,11 +30,54 @@
 		F5DF2F9B166698CB00FCB77C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5DF2F9A166698CB00FCB77C /* Default@2x.png */; };
 		F5DF2F9D166698CB00FCB77C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F5DF2F9C166698CB00FCB77C /* Default-568h@2x.png */; };
 		F5DF2FA0166698CB00FCB77C /* Shop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5DF2F9E166698CB00FCB77C /* Shop.xcdatamodeld */; };
-		F5DF2FAB1666995F00FCB77C /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5DF2FAA1666995F00FCB77C /* MainStoryboard_iPhone.storyboard */; };
 		F5DF2FAD1666998C00FCB77C /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5DF2FAC1666998C00FCB77C /* MainStoryboard_iPad.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F51333851667C4DF00B401E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F513337F1667C4DF00B401E6 /* SSToolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = SSToolkit;
+		};
+		F51333871667C4DF00B401E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F513337F1667C4DF00B401E6 /* SSToolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B239101D1357DC3E00ADE21B;
+			remoteInfo = SSToolkitTests;
+		};
+		F51333891667C4DF00B401E6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F513337F1667C4DF00B401E6 /* SSToolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B2C507EA151BA64400E94614;
+			remoteInfo = SSToolkitResources;
+		};
+		F52BF85D1667C58E00630CB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F513337F1667C4DF00B401E6 /* SSToolkit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = SSToolkit;
+		};
+		F52BF85F1667C58E00630CB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F513337F1667C4DF00B401E6 /* SSToolkit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B2C507E9151BA64400E94614;
+			remoteInfo = SSToolkitResources;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		F513336E1667957C00B401E6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		F513337A1667A2E400B401E6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F513337C1667A75A00B401E6 /* checkConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkConnection.h; sourceTree = "<group>"; };
+		F513337D1667A75A00B401E6 /* checkConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkConnection.m; sourceTree = "<group>"; };
+		F513337F1667C4DF00B401E6 /* SSToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSToolkit.xcodeproj; path = ../../Vendor/SSToolkit/SSToolkit.xcodeproj; sourceTree = "<group>"; };
+		F52BF8621667C68500630CB6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F55499E716669BA500470BAE /* LoadAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadAppViewController.h; sourceTree = "<group>"; };
 		F55499E816669BA500470BAE /* LoadAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadAppViewController.m; sourceTree = "<group>"; };
 		F55499EA16669BBE00470BAE /* MeinMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeinMenuViewController.h; sourceTree = "<group>"; };
@@ -56,7 +105,6 @@
 		F5DF2F9A166698CB00FCB77C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F5DF2F9C166698CB00FCB77C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F5DF2F9F166698CB00FCB77C /* Shop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shop.xcdatamodel; sourceTree = "<group>"; };
-		F5DF2FAA1666995F00FCB77C /* MainStoryboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		F5DF2FAC1666998C00FCB77C /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,9 +113,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52BF8641667C6A100630CB6 /* libSSToolkit.a in Frameworks */,
+				F5DF2F89166698CB00FCB77C /* CoreGraphics.framework in Frameworks */,
+				F52BF8631667C68500630CB6 /* QuartzCore.framework in Frameworks */,
+				F513337B1667A2E400B401E6 /* SystemConfiguration.framework in Frameworks */,
 				F5DF2F85166698CB00FCB77C /* UIKit.framework in Frameworks */,
 				F5DF2F87166698CB00FCB77C /* Foundation.framework in Frameworks */,
-				F5DF2F89166698CB00FCB77C /* CoreGraphics.framework in Frameworks */,
 				F5DF2F8B166698CB00FCB77C /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -75,6 +126,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F51333711667972600B401E6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F513337C1667A75A00B401E6 /* checkConnection.h */,
+				F513337D1667A75A00B401E6 /* checkConnection.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		F51333801667C4DF00B401E6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F51333861667C4DF00B401E6 /* libSSToolkit.a */,
+				F51333881667C4DF00B401E6 /* SSToolkitTests.app */,
+				F513338A1667C4DF00B401E6 /* SSToolkitResources.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F5DF2F75166698CB00FCB77C = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +165,9 @@
 		F5DF2F83166698CB00FCB77C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F52BF8621667C68500630CB6 /* QuartzCore.framework */,
+				F513337A1667A2E400B401E6 /* SystemConfiguration.framework */,
+				F513337F1667C4DF00B401E6 /* SSToolkit.xcodeproj */,
 				F5DF2F84166698CB00FCB77C /* UIKit.framework */,
 				F5DF2F86166698CB00FCB77C /* Foundation.framework */,
 				F5DF2F88166698CB00FCB77C /* CoreGraphics.framework */,
@@ -106,8 +179,9 @@
 		F5DF2F8C166698CB00FCB77C /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				F51333711667972600B401E6 /* Classes */,
 				F5F4E3DE16677B6100984C2A /* ViewControllers */,
-				F5DF2FAA1666995F00FCB77C /* MainStoryboard_iPhone.storyboard */,
+				F513336F1667957C00B401E6 /* MainStoryboard_iPhone.storyboard */,
 				F5DF2FAC1666998C00FCB77C /* MainStoryboard_iPad.storyboard */,
 				F5DF2F9E166698CB00FCB77C /* Shop.xcdatamodeld */,
 				F5DF2F95166698CB00FCB77C /* AppDelegate.h */,
@@ -164,6 +238,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				F52BF85E1667C58E00630CB6 /* PBXTargetDependency */,
+				F52BF8601667C58E00630CB6 /* PBXTargetDependency */,
 			);
 			name = Shop;
 			productName = Shop;
@@ -189,6 +265,12 @@
 			mainGroup = F5DF2F75166698CB00FCB77C;
 			productRefGroup = F5DF2F81166698CB00FCB77C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F51333801667C4DF00B401E6 /* Products */;
+					ProjectRef = F513337F1667C4DF00B401E6 /* SSToolkit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F5DF2F7F166698CB00FCB77C /* Shop */,
@@ -196,16 +278,41 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		F51333861667C4DF00B401E6 /* libSSToolkit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSSToolkit.a;
+			remoteRef = F51333851667C4DF00B401E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F51333881667C4DF00B401E6 /* SSToolkitTests.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SSToolkitTests.app;
+			remoteRef = F51333871667C4DF00B401E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F513338A1667C4DF00B401E6 /* SSToolkitResources.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SSToolkitResources.bundle;
+			remoteRef = F51333891667C4DF00B401E6 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		F5DF2F7E166698CB00FCB77C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52BF8651667C80400630CB6 /* SSToolkitResources.bundle in Resources */,
 				F5DF2F91166698CB00FCB77C /* InfoPlist.strings in Resources */,
 				F5DF2F99166698CB00FCB77C /* Default.png in Resources */,
 				F5DF2F9B166698CB00FCB77C /* Default@2x.png in Resources */,
 				F5DF2F9D166698CB00FCB77C /* Default-568h@2x.png in Resources */,
-				F5DF2FAB1666995F00FCB77C /* MainStoryboard_iPhone.storyboard in Resources */,
+				F513336D1667957C00B401E6 /* MainStoryboard_iPhone.storyboard in Resources */,
 				F5DF2FAD1666998C00FCB77C /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,12 +333,34 @@
 				F5AAD519166775690013EA58 /* InfoProductViewController.m in Sources */,
 				F5AAD51C166775CF0013EA58 /* ShareViewController.m in Sources */,
 				F5D1F06016677E8F00ECEB34 /* DetailProductViewController.m in Sources */,
+				F513337E1667A75A00B401E6 /* checkConnection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F52BF85E1667C58E00630CB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSToolkit;
+			targetProxy = F52BF85D1667C58E00630CB6 /* PBXContainerItemProxy */;
+		};
+		F52BF8601667C58E00630CB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSToolkitResources;
+			targetProxy = F52BF85F1667C58E00630CB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		F513336F1667957C00B401E6 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F513336E1667957C00B401E6 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
 		F5DF2F8F166698CB00FCB77C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -300,8 +429,14 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Shop/Shop-Prefix.pch";
+				HEADER_SEARCH_PATHS = "~/Vendor/SSToolkit";
 				INFOPLIST_FILE = "Shop/Shop-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "~/Vendor/SSToolkit";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -311,8 +446,14 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Shop/Shop-Prefix.pch";
+				HEADER_SEARCH_PATHS = "~/Vendor/SSToolkit";
 				INFOPLIST_FILE = "Shop/Shop-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "~/Vendor/SSToolkit";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
