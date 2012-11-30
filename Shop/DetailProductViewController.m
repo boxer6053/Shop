@@ -1,5 +1,3 @@
-//поработать над UIAlert
-
 #import "DetailProductViewController.h"
 #import <Social/Social.h>
 
@@ -38,7 +36,6 @@
 #pragma mark Share Part
 
 - (IBAction)toShare:(id)sender {
-    //[self performSegueWithIdentifier:@"toShare" sender:self];
     UIActionSheet *actionSheet = [[UIActionSheet alloc]init];
     [actionSheet setDelegate:self];
     [actionSheet addButtonWithTitle:@"Twitter"];

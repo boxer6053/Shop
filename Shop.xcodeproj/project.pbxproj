@@ -115,6 +115,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52BF8641667C6A100630CB6 /* libSSToolkit.a in Frameworks */,
+				F5DF2F89166698CB00FCB77C /* CoreGraphics.framework in Frameworks */,
+				F52BF8631667C68500630CB6 /* QuartzCore.framework in Frameworks */,
+				F513337B1667A2E400B401E6 /* SystemConfiguration.framework in Frameworks */,
 				FA1CEE7C16679CC300740E79 /* Social.framework in Frameworks */,
 				F5DF2F85166698CB00FCB77C /* UIKit.framework in Frameworks */,
 				F5DF2F87166698CB00FCB77C /* Foundation.framework in Frameworks */,
@@ -164,6 +168,9 @@
 		F5DF2F83166698CB00FCB77C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F52BF8621667C68500630CB6 /* QuartzCore.framework */,
+				F513337A1667A2E400B401E6 /* SystemConfiguration.framework */,
+				F513337F1667C4DF00B401E6 /* SSToolkit.xcodeproj */,
 				FA1CEE7B16679CC300740E79 /* Social.framework */,
 				F5DF2F84166698CB00FCB77C /* UIKit.framework */,
 				F5DF2F86166698CB00FCB77C /* Foundation.framework */,
