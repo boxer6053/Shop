@@ -165,9 +165,9 @@
         <scene sceneID="hso-kT-BgQ">
             <objects>
                 <viewController id="gwE-rS-ff0" customClass="LoadAppViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Krd-3d-NIZ">
+                    <view key="view" contentMode="scaleToFill" id="7VN-qO-5KA">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>

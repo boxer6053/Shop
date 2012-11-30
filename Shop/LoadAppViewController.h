@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoadAppViewController : UIViewController
+@interface LoadAppViewController : UIViewController<NSURLConnectionDataDelegate>
+{
+    NSMutableData *responseData;
+    NSURLConnection *connection;
+}
+
+
+- (void)getDBData;
 
 @end
