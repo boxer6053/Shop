@@ -9,6 +9,7 @@
 #import "LoadAppViewController.h"
 #import "checkConnection.h"
 #import "SSToolkit/SSToolkit.h"
+#import "JSONParserForDataEntenties.h"
 
 @interface LoadAppViewController ()
 
@@ -78,6 +79,8 @@
                                                    length]);
     NSString *txt = [[NSString alloc] initWithData:responseData encoding: NSUTF8StringEncoding];
     NSLog(@"strinng is - %@",txt);
+        
+    NSDictionary *entitiesDictionary = [JSONParserForDataEntenties parseJSONDataWithData:responseData];
     
     [self performSegueWithIdentifier:@"toMain" sender:self];
 
@@ -101,6 +104,8 @@
         //формат запиту потрібних талиць: table[]=tablename;maxid;version
         [requestString appendFormat:@"table[]=%@;%@;%@", @"Cities", @"0", @"1"];
         [requestString appendFormat:@"&table[]=%@;%@;%@", @"Language", @"0", @"1"];
+        [requestString appendFormat:@"&table[]=%@;%@;%@", @"Products", @"0", @"1"];
+        [requestString appendFormat:@"&table[]=%@;%@;%@", @"Types", @"0", @"1"];
         
         NSURL *url = [NSURL URLWithString:requestString];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];

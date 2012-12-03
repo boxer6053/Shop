@@ -13,8 +13,10 @@
 		F52BF8631667C68500630CB6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BF8621667C68500630CB6 /* QuartzCore.framework */; };
 		F52BF8641667C6A100630CB6 /* libSSToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F51333861667C4DF00B401E6 /* libSSToolkit.a */; };
 		F52BF8651667C80400630CB6 /* SSToolkitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F513338A1667C4DF00B401E6 /* SSToolkitResources.bundle */; };
+		F531E1F51669142100235780 /* AccessDatabaseContent.m in Sources */ = {isa = PBXBuildFile; fileRef = F531E1F41669142100235780 /* AccessDatabaseContent.m */; };
 		F55499E916669BA500470BAE /* LoadAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55499E816669BA500470BAE /* LoadAppViewController.m */; };
 		F55499EC16669BBE00470BAE /* MeinMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F55499EB16669BBE00470BAE /* MeinMenuViewController.m */; };
+		F58DCCD9166CD2170044CDBC /* JSONParserForDataEntenties.m in Sources */ = {isa = PBXBuildFile; fileRef = F58DCCD8166CD2160044CDBC /* JSONParserForDataEntenties.m */; };
 		F5AAD513166773D70013EA58 /* ProductsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AAD512166773D70013EA58 /* ProductsViewController.m */; };
 		F5AAD519166775690013EA58 /* InfoProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AAD518166775690013EA58 /* InfoProductViewController.m */; };
 		F5AAD51C166775CF0013EA58 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AAD51B166775CF0013EA58 /* ShareViewController.m */; };
@@ -79,10 +81,14 @@
 		F513337D1667A75A00B401E6 /* checkConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkConnection.m; sourceTree = "<group>"; };
 		F513337F1667C4DF00B401E6 /* SSToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSToolkit.xcodeproj; path = ../../Vendor/SSToolkit/SSToolkit.xcodeproj; sourceTree = "<group>"; };
 		F52BF8621667C68500630CB6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F531E1F31669142100235780 /* AccessDatabaseContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessDatabaseContent.h; sourceTree = "<group>"; };
+		F531E1F41669142100235780 /* AccessDatabaseContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessDatabaseContent.m; sourceTree = "<group>"; };
 		F55499E716669BA500470BAE /* LoadAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadAppViewController.h; sourceTree = "<group>"; };
 		F55499E816669BA500470BAE /* LoadAppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadAppViewController.m; sourceTree = "<group>"; };
 		F55499EA16669BBE00470BAE /* MeinMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeinMenuViewController.h; sourceTree = "<group>"; };
 		F55499EB16669BBE00470BAE /* MeinMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeinMenuViewController.m; sourceTree = "<group>"; };
+		F58DCCD7166CD2160044CDBC /* JSONParserForDataEntenties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParserForDataEntenties.h; sourceTree = "<group>"; };
+		F58DCCD8166CD2160044CDBC /* JSONParserForDataEntenties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParserForDataEntenties.m; sourceTree = "<group>"; };
 		F5AAD511166773D70013EA58 /* ProductsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductsViewController.h; sourceTree = "<group>"; };
 		F5AAD512166773D70013EA58 /* ProductsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductsViewController.m; sourceTree = "<group>"; };
 		F5AAD517166775690013EA58 /* InfoProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoProductViewController.h; sourceTree = "<group>"; };
@@ -132,6 +138,10 @@
 		F51333711667972600B401E6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F58DCCD7166CD2160044CDBC /* JSONParserForDataEntenties.h */,
+				F58DCCD8166CD2160044CDBC /* JSONParserForDataEntenties.m */,
+				F531E1F31669142100235780 /* AccessDatabaseContent.h */,
+				F531E1F41669142100235780 /* AccessDatabaseContent.m */,
 				F513337C1667A75A00B401E6 /* checkConnection.h */,
 				F513337D1667A75A00B401E6 /* checkConnection.m */,
 			);
@@ -338,6 +348,8 @@
 				F5AAD51C166775CF0013EA58 /* ShareViewController.m in Sources */,
 				F5D1F06016677E8F00ECEB34 /* DetailProductViewController.m in Sources */,
 				F513337E1667A75A00B401E6 /* checkConnection.m in Sources */,
+				F531E1F51669142100235780 /* AccessDatabaseContent.m in Sources */,
+				F58DCCD9166CD2170044CDBC /* JSONParserForDataEntenties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
