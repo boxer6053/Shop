@@ -32,6 +32,9 @@
 		F5DF2FA0166698CB00FCB77C /* Shop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5DF2F9E166698CB00FCB77C /* Shop.xcdatamodeld */; };
 		F5DF2FAD1666998C00FCB77C /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5DF2FAC1666998C00FCB77C /* MainStoryboard_iPad.storyboard */; };
 		FA1CEE7C16679CC300740E79 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1CEE7B16679CC300740E79 /* Social.framework */; };
+		FAAE47A0166FBC770067B8D2 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAAE479F166FBC770067B8D2 /* test.jpg */; };
+		FAAE47A1166FBC900067B8D2 /* Vkontakte.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAE479C166FBC5D0067B8D2 /* Vkontakte.m */; };
+		FAAE47A2166FBC940067B8D2 /* VkontakteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAE479E166FBC5D0067B8D2 /* VkontakteViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +111,11 @@
 		F5DF2F9F166698CB00FCB77C /* Shop.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Shop.xcdatamodel; sourceTree = "<group>"; };
 		F5DF2FAC1666998C00FCB77C /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		FA1CEE7B16679CC300740E79 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		FAAE479B166FBC5D0067B8D2 /* Vkontakte.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vkontakte.h; sourceTree = "<group>"; };
+		FAAE479C166FBC5D0067B8D2 /* Vkontakte.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Vkontakte.m; sourceTree = "<group>"; };
+		FAAE479D166FBC5D0067B8D2 /* VkontakteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VkontakteViewController.h; sourceTree = "<group>"; };
+		FAAE479E166FBC5D0067B8D2 /* VkontakteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VkontakteViewController.m; sourceTree = "<group>"; };
+		FAAE479F166FBC770067B8D2 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +140,10 @@
 		F51333711667972600B401E6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FAAE479B166FBC5D0067B8D2 /* Vkontakte.h */,
+				FAAE479C166FBC5D0067B8D2 /* Vkontakte.m */,
+				FAAE479D166FBC5D0067B8D2 /* VkontakteViewController.h */,
+				FAAE479E166FBC5D0067B8D2 /* VkontakteViewController.m */,
 				F513337C1667A75A00B401E6 /* checkConnection.h */,
 				F513337D1667A75A00B401E6 /* checkConnection.m */,
 			);
@@ -198,6 +210,7 @@
 		F5DF2F8D166698CB00FCB77C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FAAE479F166FBC770067B8D2 /* test.jpg */,
 				F5DF2F8E166698CB00FCB77C /* Shop-Info.plist */,
 				F5DF2F8F166698CB00FCB77C /* InfoPlist.strings */,
 				F5DF2F92166698CB00FCB77C /* main.m */,
@@ -318,6 +331,7 @@
 				F5DF2F9D166698CB00FCB77C /* Default-568h@2x.png in Resources */,
 				F513336D1667957C00B401E6 /* MainStoryboard_iPhone.storyboard in Resources */,
 				F5DF2FAD1666998C00FCB77C /* MainStoryboard_iPad.storyboard in Resources */,
+				FAAE47A0166FBC770067B8D2 /* test.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +342,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAAE47A2166FBC940067B8D2 /* VkontakteViewController.m in Sources */,
+				FAAE47A1166FBC900067B8D2 /* Vkontakte.m in Sources */,
 				F5DF2F93166698CB00FCB77C /* main.m in Sources */,
 				F5DF2F97166698CB00FCB77C /* AppDelegate.m in Sources */,
 				F5DF2FA0166698CB00FCB77C /* Shop.xcdatamodeld in Sources */,
