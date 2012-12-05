@@ -13,4 +13,7 @@
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResult;
 
+- (void)setDataToEntity:(NSString *)entityName
+withDictionaryAttribute:(NSDictionary *)attributeDictionary;
+
 @end

@@ -10,6 +10,7 @@
 #import "checkConnection.h"
 #import "SSToolkit/SSToolkit.h"
 #import "JSONParserForDataEntenties.h"
+#import "AccessDatabaseContent.h"
 
 @interface LoadAppViewController ()
 
@@ -82,6 +83,9 @@
         
     NSDictionary *entitiesDictionary = [JSONParserForDataEntenties parseJSONDataWithData:responseData];
     
+    AccessDatabaseContent *dataContent = [[AccessDatabaseContent alloc] init];
+    [dataContent setDataToEntity:@"qwert" withDictionaryAttribute:entitiesDictionary];
+    
     [self performSegueWithIdentifier:@"toMain" sender:self];
 
 }
@@ -103,9 +107,8 @@
         
         //формат запиту потрібних талиць: table[]=tablename;maxid;version
         [requestString appendFormat:@"table[]=%@;%@;%@", @"Cities", @"0", @"1"];
-        [requestString appendFormat:@"&table[]=%@;%@;%@", @"Language", @"0", @"1"];
-        [requestString appendFormat:@"&table[]=%@;%@;%@", @"Products", @"0", @"1"];
-        [requestString appendFormat:@"&table[]=%@;%@;%@", @"Types", @"0", @"1"];
+        [requestString appendFormat:@"&table[]=%@;%@;%@", @"Cities_translation", @"0", @"1"];
+        [requestString appendFormat:@"&table[]=%@;%@;%@", @"Currencies", @"0", @"1"];
         
         NSURL *url = [NSURL URLWithString:requestString];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
