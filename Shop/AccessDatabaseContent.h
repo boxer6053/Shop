@@ -12,8 +12,14 @@
 @interface AccessDatabaseContent : NSObject<NSFetchedResultsControllerDelegate>
 
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResult;
+@property (nonatomic, strong) NSManagedObjectContext* managedObjectContext;
 
-- (void)setDataToEntity:(NSString *)entityName
+- (void)setRecordToEntity:(NSString *)entityName
 withDictionaryAttribute:(NSDictionary *)attributeDictionary;
+- (NSArray *)fetchContentFromEntity:(NSString *)entityName
+               withSortedDescriptor:(NSString *)sortedDescriptor;
+- (NSArray *)fetchAllIdsFromEntity:(NSString *)entityName;
+- (void)deleteRecordFromEntity:(NSString *)entityName
+                        withId:(NSString *)recordId;
 
 @end

@@ -146,6 +146,10 @@
 		F51333711667972600B401E6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				FAAE479B166FBC5D0067B8D2 /* Vkontakte.h */,
+				FAAE479C166FBC5D0067B8D2 /* Vkontakte.m */,
+				FAAE479D166FBC5D0067B8D2 /* VkontakteViewController.h */,
+				FAAE479E166FBC5D0067B8D2 /* VkontakteViewController.m */,
 				F58DCCD7166CD2160044CDBC /* JSONParserForDataEntenties.h */,
 				F58DCCD8166CD2160044CDBC /* JSONParserForDataEntenties.m */,
 				F531E1F31669142100235780 /* AccessDatabaseContent.h */,

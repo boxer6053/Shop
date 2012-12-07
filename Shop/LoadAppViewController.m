@@ -10,7 +10,6 @@
 #import "checkConnection.h"
 #import "SSToolkit/SSToolkit.h"
 #import "JSONParserForDataEntenties.h"
-#import "AccessDatabaseContent.h"
 
 @interface LoadAppViewController ()
 
@@ -21,6 +20,15 @@
 @implementation LoadAppViewController
 
 @synthesize loadingView = _loadingView;
+@synthesize dbContent = _dbContent;
+
+- (AccessDatabaseContent *)dbContent
+{
+    if (!_dbContent) {
+        _dbContent = [[AccessDatabaseContent alloc] init];
+    }
+    return _dbContent;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -38,7 +46,7 @@
     
     self.loadingView = [[SSLoadingView alloc] initWithFrame:self.view.frame];
     [self.loadingView setBackgroundColor:[UIColor clearColor]];
-    [self.loadingView.activityIndicatorView setColor:[UIColor blackColor]];
+    [self.loadingView.activityIndicatorView setColor:[UIColor whiteColor]];
     [self.loadingView.textLabel setTextColor:[UIColor blackColor]];
     [self.loadingView.textLabel setText:@""];
     
@@ -83,8 +91,15 @@
         
     NSDictionary *entitiesDictionary = [JSONParserForDataEntenties parseJSONDataWithData:responseData];
     
-    AccessDatabaseContent *dataContent = [[AccessDatabaseContent alloc] init];
-    [dataContent setDataToEntity:@"qwert" withDictionaryAttribute:entitiesDictionary];
+    NSArray *entitiesNames = [entitiesDictionary allKeys];  //Масив імен таблиць
+    
+    for (NSString *key in entitiesNames) {
+        
+        NSArray *entityDictFields = [entitiesDictionary valueForKey:key];
+        for (NSDictionary *entityRow in entityDictFields) {
+            [self.dbContent setRecordToEntity:key withDictionaryAttribute:entityRow];
+        }
+    }
     
     [self performSegueWithIdentifier:@"toMain" sender:self];
 

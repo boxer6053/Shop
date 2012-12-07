@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AccessDatabaseContent.h"
 
 @interface LoadAppViewController : UIViewController<NSURLConnectionDataDelegate>
 {
     NSMutableData *responseData;
     NSURLConnection *connection;
 }
+
+@property (nonatomic, strong) AccessDatabaseContent *dbContent;
 
 
 - (void)getDBData;
