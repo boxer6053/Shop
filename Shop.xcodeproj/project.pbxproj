@@ -10,6 +10,7 @@
 		F513336D1667957C00B401E6 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F513336F1667957C00B401E6 /* MainStoryboard_iPhone.storyboard */; };
 		F513337B1667A2E400B401E6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F513337A1667A2E400B401E6 /* SystemConfiguration.framework */; };
 		F513337E1667A75A00B401E6 /* checkConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = F513337D1667A75A00B401E6 /* checkConnection.m */; };
+		F51DB6E9167266A40075FED0 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F51DB6E8167266A40075FED0 /* test.jpg */; };
 		F52BF8631667C68500630CB6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F52BF8621667C68500630CB6 /* QuartzCore.framework */; };
 		F52BF8641667C6A100630CB6 /* libSSToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F51333861667C4DF00B401E6 /* libSSToolkit.a */; };
 		F52BF8651667C80400630CB6 /* SSToolkitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F513338A1667C4DF00B401E6 /* SSToolkitResources.bundle */; };
@@ -34,7 +35,6 @@
 		F5DF2FA0166698CB00FCB77C /* Shop.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F5DF2F9E166698CB00FCB77C /* Shop.xcdatamodeld */; };
 		F5DF2FAD1666998C00FCB77C /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5DF2FAC1666998C00FCB77C /* MainStoryboard_iPad.storyboard */; };
 		FA1CEE7C16679CC300740E79 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1CEE7B16679CC300740E79 /* Social.framework */; };
-		FAAE47A0166FBC770067B8D2 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAAE479F166FBC770067B8D2 /* test.jpg */; };
 		FAAE47A1166FBC900067B8D2 /* Vkontakte.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAE479C166FBC5D0067B8D2 /* Vkontakte.m */; };
 		FAAE47A2166FBC940067B8D2 /* VkontakteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAE479E166FBC5D0067B8D2 /* VkontakteViewController.m */; };
 /* End PBXBuildFile section */
@@ -83,6 +83,7 @@
 		F513337C1667A75A00B401E6 /* checkConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = checkConnection.h; sourceTree = "<group>"; };
 		F513337D1667A75A00B401E6 /* checkConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = checkConnection.m; sourceTree = "<group>"; };
 		F513337F1667C4DF00B401E6 /* SSToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSToolkit.xcodeproj; path = ../../Vendor/SSToolkit/SSToolkit.xcodeproj; sourceTree = "<group>"; };
+		F51DB6E8167266A40075FED0 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 		F52BF8621667C68500630CB6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F531E1F31669142100235780 /* AccessDatabaseContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccessDatabaseContent.h; sourceTree = "<group>"; };
 		F531E1F41669142100235780 /* AccessDatabaseContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccessDatabaseContent.m; sourceTree = "<group>"; };
@@ -121,7 +122,6 @@
 		FAAE479C166FBC5D0067B8D2 /* Vkontakte.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Vkontakte.m; sourceTree = "<group>"; };
 		FAAE479D166FBC5D0067B8D2 /* VkontakteViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VkontakteViewController.h; sourceTree = "<group>"; };
 		FAAE479E166FBC5D0067B8D2 /* VkontakteViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VkontakteViewController.m; sourceTree = "<group>"; };
-		FAAE479F166FBC770067B8D2 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,7 +220,7 @@
 		F5DF2F8D166698CB00FCB77C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				FAAE479F166FBC770067B8D2 /* test.jpg */,
+				F51DB6E8167266A40075FED0 /* test.jpg */,
 				F5DF2F8E166698CB00FCB77C /* Shop-Info.plist */,
 				F5DF2F8F166698CB00FCB77C /* InfoPlist.strings */,
 				F5DF2F92166698CB00FCB77C /* main.m */,
@@ -341,7 +341,7 @@
 				F5DF2F9D166698CB00FCB77C /* Default-568h@2x.png in Resources */,
 				F513336D1667957C00B401E6 /* MainStoryboard_iPhone.storyboard in Resources */,
 				F5DF2FAD1666998C00FCB77C /* MainStoryboard_iPad.storyboard in Resources */,
-				FAAE47A0166FBC770067B8D2 /* test.jpg in Resources */,
+				F51DB6E9167266A40075FED0 /* test.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
