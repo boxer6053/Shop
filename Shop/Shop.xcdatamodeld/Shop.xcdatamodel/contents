@@ -4,11 +4,30 @@
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="is_deleted" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cities_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cities_translation" inverseName="cities" inverseEntity="Cities_translation" syncable="YES"/>
     </entity>
     <entity name="Cities_translation" syncable="YES">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="is_deleted" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cities" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Cities" inverseName="cities_translation" inverseEntity="Cities" syncable="YES"/>
+        <relationship name="language" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="cities_translation" inverseEntity="Language" syncable="YES"/>
+    </entity>
+    <entity name="Collections" syncable="YES">
+        <relationship name="collections_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Collections_translation" inverseName="collections" inverseEntity="Collections_translation" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products" inverseName="collections" inverseEntity="Products" syncable="YES"/>
+    </entity>
+    <entity name="Collections_translation" syncable="YES">
+        <relationship name="collections" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Collections" inverseName="collections_translation" inverseEntity="Collections" syncable="YES"/>
+        <relationship name="language" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="collections_translation" inverseEntity="Language" syncable="YES"/>
+    </entity>
+    <entity name="Colors" syncable="YES">
+        <relationship name="colors_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Colors_translation" inverseName="colors" inverseEntity="Colors_translation" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products" inverseName="colors" inverseEntity="Products" syncable="YES"/>
+    </entity>
+    <entity name="Colors_translation" syncable="YES">
+        <relationship name="colors" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Colors" inverseName="colors_translation" inverseEntity="Colors" syncable="YES"/>
+        <relationship name="language" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="colors_translation" inverseEntity="Language" syncable="YES"/>
     </entity>
     <entity name="Currencies" syncable="YES">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
@@ -19,23 +38,124 @@
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="is_deleted" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="cities_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Cities_translation" inverseName="language" inverseEntity="Cities_translation" syncable="YES"/>
+        <relationship name="collections_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Collections_translation" inverseName="language" inverseEntity="Collections_translation" syncable="YES"/>
+        <relationship name="colors_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Colors_translation" inverseName="language" inverseEntity="Colors_translation" syncable="YES"/>
+        <relationship name="product_care_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product_care_translation" inverseName="language" inverseEntity="Product_care_translation" syncable="YES"/>
+        <relationship name="products_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products_translation" inverseName="language" inverseEntity="Products_translation" syncable="YES"/>
+        <relationship name="shops_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shops_translation" inverseName="language" inverseEntity="Shops_translation" syncable="YES"/>
+        <relationship name="titles_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Titles_translation" inverseName="language" inverseEntity="Titles_translation" syncable="YES"/>
+        <relationship name="types_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Types_translation" inverseName="language" inverseEntity="Types_translation" syncable="YES"/>
+    </entity>
+    <entity name="Logos" syncable="YES">
+        <relationship name="pictures" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Pictures" inverseName="logos" inverseEntity="Pictures" syncable="YES"/>
+    </entity>
+    <entity name="Model" syncable="YES">
+        <relationship name="model_has_Products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Model_has_Products" inverseName="model" inverseEntity="Model_has_Products" syncable="YES"/>
+        <relationship name="pictures" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Pictures" inverseName="model" inverseEntity="Pictures" syncable="YES"/>
+    </entity>
+    <entity name="Model_has_Products" syncable="YES">
+        <relationship name="model" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Model" inverseName="model_has_Products" inverseEntity="Model" syncable="YES"/>
+        <relationship name="products" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Products" inverseName="model_has_Products" inverseEntity="Products" syncable="YES"/>
+    </entity>
+    <entity name="Pictures" syncable="YES">
+        <relationship name="logos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Logos" inverseName="pictures" inverseEntity="Logos" syncable="YES"/>
+        <relationship name="model" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Model" inverseName="pictures" inverseEntity="Model" syncable="YES"/>
+        <relationship name="products" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Products" inverseName="pictures" inverseEntity="Products" syncable="YES"/>
+        <relationship name="shops_gallery" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shops_gallery" inverseName="pictures" inverseEntity="Shops_gallery" syncable="YES"/>
+    </entity>
+    <entity name="Product_care" syncable="YES">
+        <relationship name="product_care_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product_care_translation" inverseName="product_care" inverseEntity="Product_care_translation" syncable="YES"/>
+        <relationship name="products_has_Product_care" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products_has_Product_care" inverseName="product_care" inverseEntity="Products_has_Product_care" syncable="YES"/>
+    </entity>
+    <entity name="Product_care_translation" syncable="YES">
+        <relationship name="language" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="product_care_translation" inverseEntity="Language" syncable="YES"/>
+        <relationship name="product_care" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Product_care" inverseName="product_care_translation" inverseEntity="Product_care" syncable="YES"/>
     </entity>
     <entity name="Products" syncable="YES">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="is_deleted" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="collections" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Collections" inverseName="products" inverseEntity="Collections" syncable="YES"/>
+        <relationship name="colors" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Colors" inverseName="products" inverseEntity="Colors" syncable="YES"/>
+        <relationship name="model_has_Products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Model_has_Products" inverseName="products" inverseEntity="Model_has_Products" syncable="YES"/>
+        <relationship name="pictures" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Pictures" inverseName="products" inverseEntity="Pictures" syncable="YES"/>
+        <relationship name="products_has_Product_care" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products_has_Product_care" inverseName="products" inverseEntity="Products_has_Product_care" syncable="YES"/>
+        <relationship name="products_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products_translation" inverseName="products" inverseEntity="Products_translation" syncable="YES"/>
+        <relationship name="size_has_Products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Size_has_Products" inverseName="products" inverseEntity="Size_has_Products" syncable="YES"/>
+        <relationship name="types" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Types" inverseName="products" inverseEntity="Types" syncable="YES"/>
+    </entity>
+    <entity name="Products_has_Product_care" syncable="YES">
+        <relationship name="product_care" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Product_care" inverseName="products_has_Product_care" inverseEntity="Product_care" syncable="YES"/>
+        <relationship name="products" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Products" inverseName="products_has_Product_care" inverseEntity="Products" syncable="YES"/>
+    </entity>
+    <entity name="Products_translation" syncable="YES">
+        <relationship name="language" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="products_translation" inverseEntity="Language" syncable="YES"/>
+        <relationship name="products" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Products" inverseName="products_translation" inverseEntity="Products" syncable="YES"/>
+    </entity>
+    <entity name="Shops" syncable="YES">
+        <relationship name="shops_gallery" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Shops_gallery" inverseName="shops" inverseEntity="Shops_gallery" syncable="YES"/>
+        <relationship name="shops_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Shops_translation" inverseName="shops" inverseEntity="Shops_translation" syncable="YES"/>
+    </entity>
+    <entity name="Shops_gallery" syncable="YES">
+        <relationship name="pictures" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Pictures" inverseName="shops_gallery" inverseEntity="Pictures" syncable="YES"/>
+        <relationship name="shops" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Shops" inverseName="shops_gallery" inverseEntity="Shops" syncable="YES"/>
+    </entity>
+    <entity name="Shops_translation" syncable="YES">
+        <relationship name="language" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="shops_translation" inverseEntity="Language" syncable="YES"/>
+        <relationship name="shops" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Shops" inverseName="shops_translation" inverseEntity="Shops" syncable="YES"/>
+    </entity>
+    <entity name="Size" syncable="YES">
+        <relationship name="size_has_Products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Size_has_Products" inverseName="size" inverseEntity="Size_has_Products" syncable="YES"/>
+    </entity>
+    <entity name="Size_has_Products" syncable="YES">
+        <relationship name="products" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Products" inverseName="size_has_Products" inverseEntity="Products" syncable="YES"/>
+        <relationship name="size" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Size" inverseName="size_has_Products" inverseEntity="Size" syncable="YES"/>
+    </entity>
+    <entity name="Titles" syncable="YES">
+        <relationship name="titles_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Titles_translation" inverseName="titles" inverseEntity="Titles_translation" syncable="YES"/>
+    </entity>
+    <entity name="Titles_translation" syncable="YES">
+        <relationship name="language" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="titles_translation" inverseEntity="Language" syncable="YES"/>
+        <relationship name="titles" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Titles" inverseName="titles_translation" inverseEntity="Titles" syncable="YES"/>
     </entity>
     <entity name="Types" syncable="YES">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="is_deleted" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="version" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Products" inverseName="types" inverseEntity="Products" syncable="YES"/>
+        <relationship name="types_translation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Types_translation" inverseName="types" inverseEntity="Types_translation" syncable="YES"/>
+    </entity>
+    <entity name="Types_translation" syncable="YES">
+        <relationship name="language" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Language" inverseName="types_translation" inverseEntity="Language" syncable="YES"/>
+        <relationship name="types" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Types" inverseName="types_translation" inverseEntity="Types" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Cities" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="Cities_translation" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="Currencies" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="Language" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="Products" positionX="160" positionY="192" width="128" height="90"/>
-        <element name="Types" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Cities" positionX="414" positionY="201" width="128" height="105"/>
+        <element name="Cities_translation" positionX="214" positionY="233" width="128" height="118"/>
+        <element name="Currencies" positionX="-326" positionY="-261" width="128" height="90"/>
+        <element name="Language" positionX="207" positionY="-4" width="128" height="208"/>
+        <element name="Products" positionX="207" positionY="-342" width="128" height="208"/>
+        <element name="Products_translation" positionX="216" positionY="-109" width="128" height="73"/>
+        <element name="Types" positionX="-11" positionY="-351" width="128" height="118"/>
+        <element name="Collections" positionX="-29" positionY="-216" width="128" height="73"/>
+        <element name="Collections_translation" positionX="-54" positionY="-64" width="128" height="73"/>
+        <element name="Colors" positionX="414" positionY="-351" width="128" height="73"/>
+        <element name="Colors_translation" positionX="369" positionY="-181" width="128" height="73"/>
+        <element name="Logos" positionX="-164" positionY="-252" width="128" height="58"/>
+        <element name="Pictures" positionX="-189" positionY="-160" width="128" height="103"/>
+        <element name="Model" positionX="-11" positionY="63" width="128" height="73"/>
+        <element name="Model_has_Products" positionX="-18" positionY="251" width="128" height="73"/>
+        <element name="Product_care" positionX="538" positionY="-130" width="128" height="73"/>
+        <element name="Product_care_translation" positionX="547" positionY="-0" width="128" height="73"/>
+        <element name="Products_has_Product_care" positionX="531" positionY="-270" width="128" height="73"/>
+        <element name="Shops" positionX="-182" positionY="72" width="128" height="73"/>
+        <element name="Shops_gallery" positionX="-191" positionY="-25" width="128" height="73"/>
+        <element name="Shops_translation" positionX="-164" positionY="179" width="128" height="73"/>
+        <element name="Size" positionX="369" positionY="36" width="128" height="58"/>
+        <element name="Size_has_Products" positionX="385" positionY="-81" width="128" height="73"/>
+        <element name="Titles" positionX="556" positionY="236" width="128" height="58"/>
+        <element name="Titles_translation" positionX="538" positionY="110" width="128" height="73"/>
+        <element name="Types_translation" positionX="-218" positionY="-349" width="128" height="73"/>
     </elements>
 </model>
