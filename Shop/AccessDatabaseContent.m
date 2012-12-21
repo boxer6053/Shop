@@ -53,7 +53,21 @@
         NSManagedObject *managedObject = [NSEntityDescription insertNewObjectForEntityForName:[entityDescription name] inManagedObjectContext:context];
         
         //масив імен полів
-        NSArray *entityFields = [attributeDictionary allKeys];
+//        NSMutableArray *entityFields = [[attributeDictionary allKeys] mutableCopy];
+        NSMutableArray *entityFields = [[NSMutableArray alloc] initWithArray:[attributeDictionary allKeys]];
+        
+        //приводимо всі назви полів до нижнього регістра
+        for (int i = 0; i < entityFields.count; i++) {
+            NSMutableString *tempStr = [NSMutableString stringWithString:[entityFields objectAtIndex:i]];
+            char character = [tempStr characterAtIndex:0];
+            NSString *tempChar = [NSString stringWithFormat:@"%c", character];
+            NSString *lowerChar = [tempChar lowercaseString];
+            
+            NSRange range = NSMakeRange(0, 1);
+            [tempStr replaceCharactersInRange:range withString:lowerChar];
+            
+            [entityFields replaceObjectAtIndex:i withObject:tempStr];
+        }
         
         for (NSString *field in entityFields) {
             @try {
@@ -61,7 +75,7 @@
                 [managedObject setValue:[attributeDictionary valueForKey:field] forKey:field];
             }
             @catch (NSException *exception) {
-                NSLog(@"%@: %@", [exception name], field);
+                NSLog(@"%@: %@ in table %@", [exception name], field, entityName);
             }
         }
         

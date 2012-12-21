@@ -122,9 +122,12 @@
         NSMutableString *requestString = [NSMutableString stringWithFormat:@"%@", [[NSUserDefaults standardUserDefaults] objectForKey:@"dbLink"]];
         
         //формат запиту потрібних талиць: table[]=tablename;maxid;version
-        [requestString appendFormat:@"table[]=%@;%@;%@", @"Cities", @"0", @"1"];
-        [requestString appendFormat:@"&table[]=%@;%@;%@", @"Cities_translation", @"0", @"1"];
-        [requestString appendFormat:@"&table[]=%@;%@;%@", @"Currencies", @"0", @"1"];
+        [requestString appendFormat:@"table[]=%@;%@;%@", @"Cities", @"0", @"0"];
+        [requestString appendFormat:@"&table[]=%@;%@;%@", @"Cities_translation", @"0", @"0"];
+        [requestString appendFormat:@"&table[]=%@;%@;%@", @"Currencies", @"0", @"0"];
+        [requestString appendFormat:@"&table[]=%@;%@;%@", @"Language", @"0", @"0"];
+        [requestString appendFormat:@"&table[]=%@;%@;%@", @"Logos", @"0", @"0"];
+        [requestString appendFormat:@"&table[]=%@;%@;%@", @"Pictures", @"0", @"0"];
         
         NSURL *url = [NSURL URLWithString:requestString];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];

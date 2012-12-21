@@ -22,6 +22,8 @@
 		F5AAD519166775690013EA58 /* InfoProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AAD518166775690013EA58 /* InfoProductViewController.m */; };
 		F5AAD51C166775CF0013EA58 /* ShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5AAD51B166775CF0013EA58 /* ShareViewController.m */; };
 		F5D1F06016677E8F00ECEB34 /* DetailProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5D1F05F16677E8F00ECEB34 /* DetailProductViewController.m */; };
+		F5DB3B07167A264300819D19 /* BagViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DB3B06167A264300819D19 /* BagViewController.m */; };
+		F5DB3B0E167A340F00819D19 /* BagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DB3B0D167A340F00819D19 /* BagCell.m */; };
 		F5DF2F85166698CB00FCB77C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DF2F84166698CB00FCB77C /* UIKit.framework */; };
 		F5DF2F87166698CB00FCB77C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DF2F86166698CB00FCB77C /* Foundation.framework */; };
 		F5DF2F89166698CB00FCB77C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5DF2F88166698CB00FCB77C /* CoreGraphics.framework */; };
@@ -101,6 +103,10 @@
 		F5AAD51B166775CF0013EA58 /* ShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareViewController.m; sourceTree = "<group>"; };
 		F5D1F05E16677E8F00ECEB34 /* DetailProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailProductViewController.h; sourceTree = "<group>"; };
 		F5D1F05F16677E8F00ECEB34 /* DetailProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailProductViewController.m; sourceTree = "<group>"; };
+		F5DB3B05167A264300819D19 /* BagViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BagViewController.h; sourceTree = "<group>"; };
+		F5DB3B06167A264300819D19 /* BagViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BagViewController.m; sourceTree = "<group>"; };
+		F5DB3B0C167A340F00819D19 /* BagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BagCell.h; sourceTree = "<group>"; };
+		F5DB3B0D167A340F00819D19 /* BagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BagCell.m; sourceTree = "<group>"; };
 		F5DF2F80166698CB00FCB77C /* Shop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DF2F84166698CB00FCB77C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F5DF2F86166698CB00FCB77C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -129,9 +135,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52BF8631667C68500630CB6 /* QuartzCore.framework in Frameworks */,
 				F52BF8641667C6A100630CB6 /* libSSToolkit.a in Frameworks */,
 				F5DF2F89166698CB00FCB77C /* CoreGraphics.framework in Frameworks */,
-				F52BF8631667C68500630CB6 /* QuartzCore.framework in Frameworks */,
 				F513337B1667A2E400B401E6 /* SystemConfiguration.framework in Frameworks */,
 				FA1CEE7C16679CC300740E79 /* Social.framework in Frameworks */,
 				F5DF2F85166698CB00FCB77C /* UIKit.framework in Frameworks */,
@@ -146,10 +152,10 @@
 		F51333711667972600B401E6 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				F5DB3B0C167A340F00819D19 /* BagCell.h */,
+				F5DB3B0D167A340F00819D19 /* BagCell.m */,
 				FAAE479B166FBC5D0067B8D2 /* Vkontakte.h */,
 				FAAE479C166FBC5D0067B8D2 /* Vkontakte.m */,
-				FAAE479D166FBC5D0067B8D2 /* VkontakteViewController.h */,
-				FAAE479E166FBC5D0067B8D2 /* VkontakteViewController.m */,
 				F58DCCD7166CD2160044CDBC /* JSONParserForDataEntenties.h */,
 				F58DCCD8166CD2160044CDBC /* JSONParserForDataEntenties.m */,
 				F531E1F31669142100235780 /* AccessDatabaseContent.h */,
@@ -235,6 +241,10 @@
 		F5F4E3DE16677B6100984C2A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FAAE479D166FBC5D0067B8D2 /* VkontakteViewController.h */,
+				FAAE479E166FBC5D0067B8D2 /* VkontakteViewController.m */,
+				F5DB3B05167A264300819D19 /* BagViewController.h */,
+				F5DB3B06167A264300819D19 /* BagViewController.m */,
 				F55499E716669BA500470BAE /* LoadAppViewController.h */,
 				F55499E816669BA500470BAE /* LoadAppViewController.m */,
 				F55499EA16669BBE00470BAE /* MeinMenuViewController.h */,
@@ -366,6 +376,8 @@
 				F513337E1667A75A00B401E6 /* checkConnection.m in Sources */,
 				F531E1F51669142100235780 /* AccessDatabaseContent.m in Sources */,
 				F58DCCD9166CD2170044CDBC /* JSONParserForDataEntenties.m in Sources */,
+				F5DB3B07167A264300819D19 /* BagViewController.m in Sources */,
+				F5DB3B0E167A340F00819D19 /* BagCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

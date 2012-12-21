@@ -38,6 +38,9 @@
 - (IBAction)toProductClick:(id)sender {
     
     [self performSegueWithIdentifier:@"toProducts" sender:self];
-    
+}
+
+- (IBAction)toBagClick:(id)sender {
+    [self performSegueWithIdentifier:@"toBag" sender:self];
 }
 @end

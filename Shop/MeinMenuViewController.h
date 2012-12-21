@@ -10,5 +10,6 @@
 
 @interface MeinMenuViewController : UIViewController
 - (IBAction)toProductClick:(id)sender;
+- (IBAction)toBagClick:(id)sender;
 
 @end
