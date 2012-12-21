@@ -53,10 +53,10 @@
         NSManagedObject *managedObject = [NSEntityDescription insertNewObjectForEntityForName:[entityDescription name] inManagedObjectContext:context];
         
         //масив імен полів
-//        NSMutableArray *entityFields = [[attributeDictionary allKeys] mutableCopy];
+        NSMutableArray *globalEntityFields = [[attributeDictionary allKeys] mutableCopy];
         NSMutableArray *entityFields = [[NSMutableArray alloc] initWithArray:[attributeDictionary allKeys]];
         
-        //приводимо всі назви полів до нижнього регістра
+        //приводимо першу букву назви поля до нижнього регістра
         for (int i = 0; i < entityFields.count; i++) {
             NSMutableString *tempStr = [NSMutableString stringWithString:[entityFields objectAtIndex:i]];
             char character = [tempStr characterAtIndex:0];
@@ -69,15 +69,32 @@
             [entityFields replaceObjectAtIndex:i withObject:tempStr];
         }
         
-        for (NSString *field in entityFields) {
+//        for (NSString *field in entityFields) {
+//            @try {
+//                //запис до таблиці
+//                [managedObject setValue:[attributeDictionary valueForKey:field] forKey:field];
+//            }
+//            @catch (NSException *exception) {
+//                NSLog(@"%@: %@ in table %@", [exception name], field, entityName);
+//            }
+//        }
+        
+        
+        //----------------------TEMP------------------------
+        //удалити після того як Огус перезаллє БД
+        //і розкоментувати код зверху
+        for (int i = 0; i < entityFields.count; i++) {
             @try {
                 //запис до таблиці
-                [managedObject setValue:[attributeDictionary valueForKey:field] forKey:field];
+                [managedObject setValue:[attributeDictionary valueForKey:[globalEntityFields objectAtIndex:i]] forKey:[entityFields objectAtIndex:i]];
+
             }
             @catch (NSException *exception) {
-                NSLog(@"%@: %@ in table %@", [exception name], field, entityName);
+                NSLog(@"%@: %@ in table %@", [exception name], [entityFields objectAtIndex:i], entityName);
             }
         }
+        //----------------------TEMP------------------------
+        
         
         NSError *error;
         //збереження контексту

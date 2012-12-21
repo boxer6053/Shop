@@ -92,7 +92,7 @@
     NSDictionary *entitiesDictionary = [JSONParserForDataEntenties parseJSONDataWithData:responseData];
     
     //Масив імен таблиць
-    NSArray *entitiesNames = [entitiesDictionary allKeys];  
+    NSArray *entitiesNames = [entitiesDictionary allKeys];
     
     for (NSString *key in entitiesNames) {
         
